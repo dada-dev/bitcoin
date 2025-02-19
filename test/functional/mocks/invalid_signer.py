@@ -46,20 +46,20 @@ parser.add_argument('--stdin', action='store_true')
 subparsers = parser.add_subparsers(description='Commands', dest='command')
 subparsers.required = True
 
-parser_enumerate = subparsers.add_parser('enumerate', help='list available signers')
-parser_enumerate.set_defaults(func=enumerate)
+# parser_enumerate = subparsers.add_parser('enumerate', help='list available signers')
+# parser_enumerate.set_defaults(func=enumerate)
 
-parser_getdescriptors = subparsers.add_parser('getdescriptors')
-parser_getdescriptors.set_defaults(func=getdescriptors)
-parser_getdescriptors.add_argument('--account', metavar='account')
+# parser_getdescriptors = subparsers.add_parser('getdescriptors')
+# parser_getdescriptors.set_defaults(func=getdescriptors)
+# parser_getdescriptors.add_argument('--account', metavar='account')
 
-if not sys.stdin.isatty():
-    buffer = sys.stdin.read()
-    if buffer and buffer.rstrip() != "":
-        sys.argv.extend(buffer.rstrip().split(" "))
+# if not sys.stdin.isatty():
+#     buffer = sys.stdin.read()
+#     if buffer and buffer.rstrip() != "":
+#         sys.argv.extend(buffer.rstrip().split(" "))
 
-args = parser.parse_args()
+# args = parser.parse_args()
 
-perform_pre_checks()
+# perform_pre_checks()
 
-args.func(args)
+# args.func(args)
