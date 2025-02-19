@@ -4,6 +4,8 @@
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """An example functional test
 
+An example Functional Test
+
 The module-level docstring should include a high-level description of
 what the test is doing. It's the first thing people see when they open
 the file and should give the reader information about *what* the test
