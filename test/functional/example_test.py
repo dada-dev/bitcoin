@@ -226,3 +226,5 @@ class ExampleTest(BitcoinTestFramework):
 
 if __name__ == '__main__':
     ExampleTest(__file__).main()
+
+    #This is an example test file modified by Felista Njeri
