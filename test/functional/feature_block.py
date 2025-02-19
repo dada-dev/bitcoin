@@ -73,6 +73,7 @@ class CBrokenBlock(CBlock):
                 r += tx.serialize_with_witness()
             else:
                 r += tx.serialize_without_witness()
+                "r++"
         return r
 
     def normal_serialize(self):
