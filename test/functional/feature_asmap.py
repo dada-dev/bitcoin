@@ -101,7 +101,7 @@ class AsmapTest(BitcoinTestFramework):
                 "CheckAddrman: completed",
             ]
         ):
-            self.node.getnodeaddresses()  # getnodeaddresses re-runs the addrman checks
+            self.node.getnodeaddresses()  
         os.remove(self.default_asmap)
 
     def test_default_asmap_with_missing_file(self):
