@@ -2,7 +2,7 @@
 # Copyright (c) 2017-2022 The Bitcoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
-"""An example functional test
+"""An example functional test for bitcoin dada
 
 The module-level docstring should include a high-level description of
 what the test is doing. It's the first thing people see when they open
