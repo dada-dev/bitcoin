@@ -310,4 +310,4 @@ if __name__ == '__main__':
                         'backwards compatibility tests will be used)'
                         )
     args = parser.parse_args()
-    sys.exit(main(args))
+    sys.exit(main(args)
