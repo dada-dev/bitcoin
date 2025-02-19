@@ -15,6 +15,7 @@ from test_framework.test_framework import BitcoinTestFramework
 class AbortNodeTest(BitcoinTestFramework):
     def set_test_params(self):
         self.setup_clean_chain = True
+        
         self.num_nodes = 2
 
     def setup_network(self):
