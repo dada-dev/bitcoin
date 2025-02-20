@@ -15,6 +15,7 @@ from test_framework.blocktools import (
     REGTEST_N_BITS,
 )
 from test_framework.messages import (
+
     CBlock,
     COIN,
     COutPoint,
