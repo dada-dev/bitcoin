@@ -9,7 +9,7 @@
 - Mine a fork that requires disconnecting the tip.
 - Verify that bitcoind AbortNode's.
 """
-from test_framework.test_framework import BitcoinTestFramework
+#from test_framework.test_framework import BitcoinTestFramework
 
 
 class AbortNodeTest(BitcoinTestFramework):
