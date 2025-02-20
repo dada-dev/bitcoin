@@ -108,7 +108,7 @@ class CreateWalletWatchonlyTest(BitcoinTestFramework):
         assert_equal("hex" in result, True)
         assert_raises_rpc_error(-4, "Insufficient funds", wo_wallet.fundrawtransaction, rawtx, no_wo_options)
 
-
+#This comment has been added by Monica
 
 if __name__ == '__main__':
     CreateWalletWatchonlyTest(__file__).main()
