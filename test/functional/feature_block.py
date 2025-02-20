@@ -7,6 +7,7 @@ import copy
 import time
 
 from test_framework.blocktools import (
+
     create_block,
     create_coinbase,
     create_tx_with_script,
