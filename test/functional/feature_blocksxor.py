@@ -66,3 +66,5 @@ class BlocksXORTest(BitcoinTestFramework):
 
 if __name__ == '__main__':
     BlocksXORTest(__file__).main()
+
+    # file modification
