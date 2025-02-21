@@ -23,7 +23,7 @@ from test_framework.script import (
     CScriptNum,
     OP_1NEGATE,
     OP_CHECKLOCKTIMEVERIFY,
-    OP_DROP,
+    # OP_DROP,
 )
 from test_framework.test_framework import BitcoinTestFramework
 from test_framework.util import assert_equal
@@ -191,7 +191,7 @@ class BIP65Test(BitcoinTestFramework):
 
         block.vtx.pop(1)
         block.vtx.append(spendtx)
-        block.hashMerkleRoot = block.calc_merkle_root()
+        # block.hashMerkleRoot = block.calc_merkle_root()
         block.solve()
 
         self.test_cltv_info(is_active=True)  # Not active as of current tip, but next block must obey rules
