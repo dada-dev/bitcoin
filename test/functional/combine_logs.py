@@ -8,6 +8,7 @@ This streams the combined log output to stdout. Use combine_logs.py > outputfile
 to write to an outputfile.
 
 If no argument is provided, the most recent test directory will be used."""
+#Danselyne reviewed the code.
 
 import argparse
 from collections import defaultdict, namedtuple
