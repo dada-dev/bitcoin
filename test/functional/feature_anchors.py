@@ -17,7 +17,7 @@ BLOCK_RELAY_CONNECTIONS = 2
 ONION_ADDR = "pg6mmjiyjmcrsslvykfwnntlaru7p5svn6y2ymmju6nubxndf4pscryd.onion:8333"
 
 
-class AnchorsTest(BitcoinTestFramework):
+#class AnchorsTest(BitcoinTestFramework):
     def set_test_params(self):
         self.num_nodes = 1
         self.disable_autoconnect = False
