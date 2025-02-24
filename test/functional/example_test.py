@@ -162,7 +162,7 @@ class ExampleTest(BitcoinTestFramework):
 
         # Logs are nice. Do plenty of them. They can be used in place of comments for
         # breaking the test into sub-sections.
-        self.log.info("Starting test!")
+        self.log.info("Starting the test!")
 
         self.log.info("Calling a custom function")
         custom_function()
@@ -226,3 +226,4 @@ class ExampleTest(BitcoinTestFramework):
 
 if __name__ == '__main__':
     ExampleTest(__file__).main()
+    # This is Daisy editing this file
