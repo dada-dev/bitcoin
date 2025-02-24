@@ -156,6 +156,7 @@ class AddressTypeTest(BitcoinTestFramework):
             assert 'pubkeys' in info
         else:
             # Unknown type
+            # Does not fall in any other sanity checks above
             assert False
 
     def test_desc(self, node, address, multisig, typ, utxo):
