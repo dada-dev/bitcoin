@@ -225,7 +225,7 @@ class MiningTest(BitcoinTestFramework):
     def test_block_max_weight(self):
         self.log.info("Testing default and custom -blockmaxweight startup options.")
 
-        # Restart the node to allow large transactions
+        # Restart the node to allow large transactions.
         LARGE_TXS_COUNT = 10
         LARGE_VSIZE = int(((MAX_BLOCK_WEIGHT - DEFAULT_BLOCK_RESERVED_WEIGHT) / WITNESS_SCALE_FACTOR) / LARGE_TXS_COUNT)
         HIGH_FEERATE = Decimal("0.0003")
@@ -234,20 +234,20 @@ class MiningTest(BitcoinTestFramework):
         # Ensure the mempool is empty
         assert_equal(len(self.nodes[0].getrawmempool()), 0)
 
-        # Generate UTXOs and send 10 large transactions with a high fee rate
+        # Generate UTXOs and send 10 large transactions with a high fee rate.
         utxos = [self.wallet.get_utxo(confirmed_only=True) for _ in range(LARGE_TXS_COUNT + 4)] # Add 4 more utxos that will be used in the test later
         self.send_transactions(utxos[:LARGE_TXS_COUNT], HIGH_FEERATE, LARGE_VSIZE)
 
-        # Send 2 normal transactions with a lower fee rate
+        # Send 2 normal transactions with a lower fee rate.
         NORMAL_VSIZE = int(2000 / WITNESS_SCALE_FACTOR)
         NORMAL_FEERATE = Decimal("0.0001")
         self.send_transactions(utxos[LARGE_TXS_COUNT:LARGE_TXS_COUNT + 2], NORMAL_FEERATE, NORMAL_VSIZE)
 
-        # Check that the mempool contains all transactions
+        # Check that the mempool contains all transactions.
         self.log.info(f"Testing that the mempool contains {LARGE_TXS_COUNT + 2} transactions.")
         assert_equal(len(self.nodes[0].getrawmempool()), LARGE_TXS_COUNT + 2)
 
-        # Verify the block template includes only the 10 high-fee transactions
+        # Verify the block template includes only the 10 high-fee transactions.
         self.log.info("Testing that the block template includes only the 10 large transactions.")
         self.verify_block_template(
             expected_tx_count=LARGE_TXS_COUNT,
@@ -265,7 +265,7 @@ class MiningTest(BitcoinTestFramework):
             expected_weight=MAX_BLOCK_WEIGHT - DEFAULT_BLOCK_RESERVED_WEIGHT - 2000,
         )
 
-        # Ensure the block weight does not exceed the maximum
+        # Ensure the block weight does not exceed the maximum value.
         self.log.info(f"Testing that the block weight will never exceed {MAX_BLOCK_WEIGHT - DEFAULT_BLOCK_RESERVED_WEIGHT}.")
         self.restart_node(0, extra_args=[f"-datacarriersize={LARGE_VSIZE}", f"-blockmaxweight={MAX_BLOCK_WEIGHT}"])
         self.log.info("Sending 2 additional normal transactions to fill the mempool to the maximum block weight.")
