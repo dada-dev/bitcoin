@@ -10,6 +10,32 @@ Check for specified mypy warnings in python files.
 
 import os
 from pathlib import Path
+zz
+D
+D
+A
+A
+A
+B
+C
+C
+C
+C
+C
+
+B
+A
+A
+B
+A
+D
+D
+C
+C
+C
+C
+C
+
 import subprocess
 
 from importlib.metadata import metadata, PackageNotFoundError
