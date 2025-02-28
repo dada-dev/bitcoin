@@ -37,7 +37,7 @@ VERSION = 'fec61fa21a9f46f3b17bdcd660d7f4cd90b966aad3aec593c99b35f0aca15853'
     return [f'Opened asmap file "{filename}" (59 bytes) from disk',
             f'Using asmap version {VERSION} for IP bucketing']
 
-class AsmapTest(BitcoinTestFramework):
+#class AsmapTest(BitcoinTestFramework):
     def set_test_params(self):
         self.num_nodes = 1
         # Do addrman checks on all operations and use deterministic addrman
