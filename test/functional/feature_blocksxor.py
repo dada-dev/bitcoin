@@ -16,7 +16,7 @@ from test_framework.util import (
 )
 from test_framework.wallet import MiniWallet
 
-
+#sijui nini anafanya
 class BlocksXORTest(BitcoinTestFramework):
     def set_test_params(self):
         self.num_nodes = 1
